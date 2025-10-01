@@ -63,7 +63,7 @@ jobs:
         run: |
           docker run \
             --rm \
-            --platform linux/amd64 \
+            --platform linux/arm64 \
             --workdir /builder/mnt \
             -v ${{ github.workspace }}:/builder/mnt \
             cproject-builder:latest \
@@ -73,7 +73,7 @@ jobs:
         run: |
           docker run \
             --rm \
-            --platform linux/amd64 \
+            --platform linux/arm64 \
             --workdir /builder/mnt/tests/unittest \
             -v ${{ github.workspace }}:/builder/mnt \
             cproject-builder:latest \
